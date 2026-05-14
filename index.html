@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me and HTML Forms</title>
+
+    <!--
+        Name: Samiran Dhakal
+        Assignment: HTML Forms
+        Last Updated: May 2026
+    -->
+
+    <link rel="stylesheet" href="SamiranDhakal_formstyles.css">
+    <script src="SamiranDhakal_forms.js" defer></script>
+</head>
+
+<body>
+
+    <h1>About Me</h1>
+
+    <p>
+        My name is Samiran Dhakal. I enjoy learning programming,
+        web development, fitness, and basketball.
+    </p>
+
+    <h2>My Courses</h2>
+
+    <div class="course-container">
+
+        <div class="course-box">
+            <h3>Programming Fundamentals</h3>
+            <p>Learning Java basics, loops, methods, and problem solving.</p>
+        </div>
+
+        <div class="course-box">
+            <h3>Web Development</h3>
+            <p>Learning HTML, CSS, and JavaScript for interactive websites.</p>
+        </div>
+
+        <div class="course-box">
+            <h3>Database Systems</h3>
+            <p>Studying SQL and how databases organize information.</p>
+        </div>
+
+        <div class="course-box">
+            <h3>Computer Networks</h3>
+            <p>Understanding internet communication and networking basics.</p>
+        </div>
+
+    </div>
+
+    <h2>Interactive HTML Forms</h2>
+
+    <div class="form-grid">
+
+        <!-- Grid 1 -->
+        <div class="form-box">
+            <h3>Arithmetic Calculator</h3>
+
+            <input type="number" id="num1" placeholder="First Number">
+            <input type="number" id="num2" placeholder="Second Number">
+
+            <div class="radio-group">
+                <label><input type="radio" name="operator" value="+"> Add</label>
+                <label><input type="radio" name="operator" value="-"> Subtract</label>
+                <label><input type="radio" name="operator" value="*"> Multiply</label>
+                <label><input type="radio" name="operator" value="/"> Divide</label>
+            </div>
+
+            <button onclick="calculateResult()">Calculate</button>
+        </div>
+
+        <!-- Grid 2 -->
+        <div class="form-box">
+            <h3>Factorial Finder</h3>
+
+            <input type="number" id="factorialInput" placeholder="Enter Integer">
+
+            <button onclick="findFactorial()">Find Factorial</button>
+        </div>
+
+        <!-- Grid 3 -->
+        <div class="form-box">
+            <h3>Fibonacci Number</h3>
+
+            <input type="number" id="fibonacciInput" placeholder="Enter N">
+
+            <button onclick="findFibonacci()">Generate</button>
+        </div>
+
+        <!-- Grid 4 -->
+        <div class="form-box">
+            <h3>Min, Max, and Range</h3>
+
+            <input type="number" id="value1" placeholder="First Number">
+            <input type="number" id="value2" placeholder="Second Number">
+            <input type="number" id="value3" placeholder="Third Number">
+
+            <button onclick="analyzeNumbers()">Analyze</button>
+        </div>
+
+        <!-- Grid 5 -->
+        <div class="mailing-box">
+            <h3>Mailing List Sign-Up</h3>
+
+            <form onsubmit="saveSignup(event)">
+
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" placeholder="John">
+
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" placeholder="Doe">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="John@AOL.com">
+
+                <label for="zipCode">ZIP Code</label>
+                <input type="text" id="zipCode" placeholder="12345">
+
+                <div class="button-group">
+                    <button type="submit">Submit Form</button>
+                    <button type="reset">Reset Form</button>
+                </div>
+
+            </form>
+
+            <div id="signupResults" class="results-box"></div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
